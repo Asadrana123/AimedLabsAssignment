@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.outer-div{
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.inner-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
+.register:hover{
+      cursor: pointer;
+      color: skyblue;
+}
+.mylabel{
+    margin-bottom: 5px;
+}
+.from-div{
+  width: 90%;
+}
+.home{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .inner-div{
+    width: 100%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+}
+  .animation{
+    display: none; /* Hide the div when the screen width is 600px or less */
   }
 }
