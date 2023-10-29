@@ -37,7 +37,7 @@ function Signin() {
     <div className='inner-div animation'>
     <Lottie
                 animationData={Animation}
-                styles={{height:"600px"}}
+                styles={{height:"500px"}}
               />
     </div>
     <div className='inner-div'>
