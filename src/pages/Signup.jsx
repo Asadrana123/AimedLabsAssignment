@@ -7,6 +7,7 @@ import {
   SubmitButton,
   Title,
 } from '../Styles/Signupformstyle';
+import { UserState } from '../Context/Provider';
 import Lottie from "lottie-react";
 function Signup() {
   const navigate=useNavigate();
@@ -14,6 +15,7 @@ function Signup() {
   const [email, setEmail] = useState();
   const [confirmpassword, setConfirmpassword] = useState();
   const [password, setPassword] = useState();
+  const {setUser,user}=UserState();
   const submitHandler = async () => {
     console.log("hi");
     if (password.length<10) {
@@ -27,6 +29,8 @@ function Signup() {
     }
     console.log(name, email, password);
     localStorage.setItem('UserInfo', JSON.stringify({name,email,password}));
+    setUser({name, email, password})
+    console.log(user);
     navigate("/")
   };
   return (
