@@ -1,16 +1,14 @@
 import './App.css';
-import {  Routes, Route } from "react-router-dom";
-import Home from './pages/Home';
-import Signin from './pages/Signin';
-import Signup from './pages/Signup';
+import Details from './Components/Details';
+import Navbar from './Components/Navbar';
+import Middle from './Components/Middle';
 function App() {
   return (
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/Signup" element={<Signup />} />
-    <Route path="/Signin" element={<Signin />} />    
-    </Routes>
+    <div className='main-container'>
+    <div className='sub-container'><Navbar/></div>
+    <div className='sub-container'><Middle/></div>
+    <div className='sub-container'><Details/></div>
+    </div>
   );
 }
-
 export default App;
